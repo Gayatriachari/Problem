@@ -1,0 +1,27 @@
+package practice.problems;
+
+import java.util.Scanner;
+
+class Launch21{
+	public void display(int[] num,int target) {
+		for(int i=0;i<num.length;i++) {
+			for(int j=0;j<num.length;j++) { 
+				if(num[i]+num[j]==target) {
+					System.out.print(i+" "+j); 
+					System.exit(1);
+				} 
+			}
+		} 	
+	}
+}
+public class Pro2 {
+	public static void main(String[] args) {
+		int[] num= {1,2,3,4,5};
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter target"); 
+        int target=scan.nextInt(); 
+        Launch21 ob=new Launch21(); 
+        ob.display(num, target); 
+	}
+
+}
