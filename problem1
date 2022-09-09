@@ -1,0 +1,46 @@
+package practice.problems;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+class Launch12{ 
+	ArrayList<Integer> list=new ArrayList<Integer>();
+	public void checking1(int b){
+		for(int i=0;i<1500;i++) {
+			int sum=0;
+			int j=i;
+			while(j!=0) {
+				sum=sum+(j%10);
+				j=j/10;
+			} 
+			if(sum==b) {
+				list.add(i);
+			} 
+		} 
+		System.out.println(Collections.min(list));
+	}
+}
+class Launch11{
+	ArrayList<String> items=new ArrayList<String>();
+	public void checking(int b) {
+		if(b<10) {
+			System.out.println(b);
+		} 
+		else {
+			Launch12 ob=new Launch12(); 
+			ob.checking1(b);
+		}
+	}
+}
+public class Pro1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner scan=new Scanner(System.in); 
+        System.out.println("enter a number"); 
+        int b=scan.nextInt(); 
+        Launch11 ob=new Launch11(); 
+        ob.checking(b);
+	}
+
+}
