@@ -1,0 +1,36 @@
+package practice.problems;
+
+import java.util.Scanner;
+
+class Launch22{
+	public int disp(String s,int d) { 
+		switch(s) {
+		case "one": 
+			 return 1*d;
+		case "two":
+			return 2*d;
+			
+		case "three":
+			return 3*d;	
+		case "four":
+			return 4*d; 
+		case "five":
+			return 4*d;
+		}
+		return 0;
+	} 
+}
+public class Pro3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Launch22 ob=new Launch22();
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the number");
+        int a=scan.nextInt(); 
+        System.out.println("Enter string between one to five");
+        String s=scan.next();
+        System.out.println(ob.disp(s, a));
+	}
+
+}
